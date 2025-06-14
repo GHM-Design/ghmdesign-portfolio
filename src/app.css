@@ -1,0 +1,147 @@
+@import 'tailwindcss';
+
+/* Google Fonts - Engineer style + Handwritten */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap');
+
+/* White background around everything */
+body { 
+	@apply h-full text-gray-900;
+	font-family: 'Orbitron', monospace !important;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	background-color: white;
+	margin: 0;
+	padding: 2rem;
+}
+
+html {
+	background-color: white;
+}
+
+/* Header font - Roboto Mono */
+.header-font {
+	font-family: 'Roboto Mono', monospace !important;
+	font-weight: 400;
+}
+
+/* Body text font - Orbitron (engineer style) */
+.body-font {
+	font-family: 'Orbitron', monospace !important;
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+}
+
+/* Handwriting style headings */
+.handwriting {
+	font-family: 'Orbitron', monospace !important;
+	text-transform: uppercase;
+	letter-spacing: 0.1em;
+	font-weight: 600;
+}
+
+/* Handwritten underline style */
+.handwritten-underline {
+	font-family: 'Kalam', cursive !important;
+	text-transform: none;
+	letter-spacing: normal;
+	position: relative;
+	display: inline-block;
+	color: #333;
+	padding: 0.25rem 1rem;
+	min-width: 200px;
+	border-radius: 4px;
+	transition: all 0.2s ease;
+}
+
+.handwritten-underline::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: -2px;
+	height: 1px;
+	background: #333;
+	transform: scaleY(0.5);
+	transition: all 0.2s ease;
+}
+
+/* Hover effect for clickable elements */
+a.handwritten-underline:hover::after {
+	background: #2d5a2d;
+	height: 2px;
+	transform: scaleY(1);
+}
+
+/* Highlight animation for menu items */
+.highlight-animation {
+	background-color: #e8f5e8 !important;
+	color: #2d5a2d !important;
+}
+
+.highlight-animation::after {
+	background: #2d5a2d !important;
+	height: 2px !important;
+	transform: scaleY(1) !important;
+}
+
+/* Logo green color - matching the Giants Head logo */
+.logo-green {
+	background-color: #2d5a2d;
+}
+
+.bg-logo-green {
+	background-color: #2d5a2d;
+}
+
+.text-logo-green {
+	color: #2d5a2d;
+}
+
+/* Logo teal color for accents */
+.logo-teal {
+	background-color: #2d5a2d;
+}
+
+.bg-logo-teal {
+	background-color: #2d5a2d;
+}
+
+.text-logo-teal {
+	color: #2d5a2d;
+}
+
+/* Header area - 175px white margin above graph paper */
+.header-margin {
+	background-color: white;
+	height: 175px;
+	padding: 2rem;
+	padding-bottom: 0;
+	border: 2px solid #000;
+	border-bottom: none;
+	display: flex;
+	align-items: flex-end;
+}
+
+/* Graph paper sheet container - starts below header */
+.graph-paper-sheet {
+	background-color: #ffffff;
+	background-image: 
+		/* Very light fine grid lines */
+		linear-gradient(rgba(0,150,136,0.08) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0,150,136,0.08) 1px, transparent 1px),
+		/* Slightly more visible major grid lines every 5th line */
+		linear-gradient(rgba(0,150,136,0.12) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(0,150,136,0.12) 1px, transparent 1px);
+	background-size: 20px 20px, 20px 20px, 100px 100px, 100px 100px;
+	border: 2px solid #000;
+	border-top: none;
+	min-height: calc(100vh - 175px - 8rem);
+	padding: 2rem;
+}
+
+/* Smooth scrolling */
+html {
+	scroll-behavior: smooth;
+}
