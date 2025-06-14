@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Google Fonts - Engineer style + Handwritten */
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap');
@@ -99,15 +101,7 @@ a.handwritten-underline:hover::after {
 	color: #2d5a2d;
 }
 
-/* Logo teal color for accents */
-.logo-teal {
-	background-color: #2d5a2d;
-}
-
-.bg-logo-teal {
-	background-color: #2d5a2d;
-}
-
+/* Keep the original teal for the grid */
 .text-logo-teal {
 	color: #2d5a2d;
 }

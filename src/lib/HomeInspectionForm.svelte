@@ -103,8 +103,8 @@
 	$: completionColor = getCompletionColor(formData.completionLevel);
 </script>
 
-<!-- Main Container with White Background -->
-<div class="min-h-screen bg-white p-4">
+<!-- Main Container with Grey Background -->
+<div class="min-h-screen bg-gray-100 p-4">
 	{#if showSuccess}
 		<div class="max-w-md mx-auto" transition:fade>
 			<!-- Success Card -->
@@ -346,3 +346,31 @@
 		</div>
 	{/if}
 </div>
+
+<style>
+	/* Custom slider styling */
+	.slider {
+		background: linear-gradient(to right, #ef4444 0%, #eab308 50%, #2d5a2d 100%);
+	}
+	
+	.slider::-webkit-slider-thumb {
+		appearance: none;
+		width: 20px;
+		height: 20px;
+		background: white;
+		border: 2px solid #d1d5db;
+		border-radius: 50%;
+		cursor: pointer;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+	
+	.slider::-moz-range-thumb {
+		width: 20px;
+		height: 20px;
+		background: white;
+		border: 2px solid #d1d5db;
+		border-radius: 50%;
+		cursor: pointer;
+		box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	}
+</style>
