@@ -1,15 +1,15 @@
 /* Google Fonts - Engineer style + Handwritten */
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500;600;700&family=Coming+Soon&family=Kalam:wght@400;700&display=swap');
 
 /* White background around everything */
 body { 
-	font-family: 'Orbitron', monospace !important;
+	font-family: 'Coming Soon', cursive !important;
 	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
 	background-color: white;
 	margin: 0;
 	padding: 2rem;
+	color: #333;
+	text-transform: uppercase !important;
 }
 
 html {
@@ -22,20 +22,18 @@ html {
 	font-weight: 400;
 }
 
-/* Body text font - Orbitron (engineer style) */
+/* Body text font - Coming Soon */
 .body-font {
-	font-family: 'Orbitron', monospace !important;
-	text-transform: uppercase;
-	letter-spacing: 0.05em;
+	font-family: 'Coming Soon', cursive !important;
 	font-weight: 400;
+	text-transform: uppercase !important;
 }
 
 /* Handwriting style headings */
 .handwriting {
-	font-family: 'Orbitron', monospace !important;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
-	font-weight: 600;
+	font-family: 'Coming Soon', cursive !important;
+	font-weight: 400;
+	text-transform: uppercase !important;
 }
 
 /* Handwritten underline style */
@@ -130,7 +128,190 @@ a.handwritten-underline:hover::after {
 	padding: 2rem;
 }
 
+/* Mobile layout - add top border when header is not shown */
+.graph-paper-sheet.pt-16 {
+	border-top: 2px solid #000;
+}
+
 /* Smooth scrolling */
 html {
 	scroll-behavior: smooth;
+}
+
+/* RESPONSIVE FONT SIZING - Simple two breakpoint system */
+/* Mobile: 16px base font size */
+html {
+	font-size: 16px;
+}
+
+/* Tablet and Desktop (768px+): 18px base font size */
+@media (min-width: 768px) {
+	html {
+		font-size: 18px;
+	}
+}
+
+/* APP CONTENT - Use Roboto Mono for all app interfaces */
+/* Target all content inside modal dialogs/apps - be more aggressive */
+.fixed.inset-0 *,
+.fixed.inset-0 h1,
+.fixed.inset-0 h2,
+.fixed.inset-0 h3,
+.fixed.inset-0 h4,
+.fixed.inset-0 h5,
+.fixed.inset-0 h6,
+.fixed.inset-0 p,
+.fixed.inset-0 span,
+.fixed.inset-0 div,
+.fixed.inset-0 label,
+.fixed.inset-0 button,
+.fixed.inset-0 input,
+.fixed.inset-0 textarea,
+.modal *,
+.modal button,
+.modal input,
+.modal textarea,
+.modal label,
+.modal p,
+.modal h1,
+.modal h2,
+.modal h3,
+.modal h4,
+.modal h5,
+.modal h6,
+.modal span,
+.modal div {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* More specific targeting for the modal backdrop */
+div[class*="fixed inset-0"] *,
+div[class*="z-50"] * {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* All buttons everywhere */
+button {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* All anchor tags styled as buttons */
+a[class*="px-"], 
+a[class*="py-"], 
+a[href="#projects"], 
+a[href="#contact"] {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Form elements */
+input, textarea, select, label {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Target the specific main page buttons */
+section button,
+section a[class*="px-"],
+section a[class*="button"],
+.handwriting button,
+.handwriting a[class*="px-"] {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Side menu styles */
+nav a,
+nav span,
+nav p,
+nav h4 {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Mobile menu styles */
+.fixed.top-0.left-0 * {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Target all main content paragraphs and headings that should be uppercase */
+h1, h2, h3, h4, h5, h6, p {
+	text-transform: uppercase !important;
+}
+
+/* Tool demonstration descriptions - use Coming Soon font */
+.text-gray-600.mb-3.text-sm {
+	font-family: 'Coming Soon', cursive !important;
+	text-transform: uppercase !important;
+}
+
+/* But override for specific elements that should NOT be uppercase */
+.handwritten-underline,
+.roboto-mono,
+button,
+input,
+textarea,
+select,
+label,
+nav *,
+[data-app="true"] *,
+.modal *,
+.p-8 *,
+.max-w-7xl *,
+.max-w-4xl *,
+.menu-link,
+a.menu-link,
+.text-xs.text-gray-500.italic,
+.fixed.inset-0 *,
+div[class*="fixed inset-0"] *,
+div[class*="z-50"] * {
+	text-transform: none !important;
+	font-family: 'Roboto Mono', monospace !important;
+}
+
+/* Keep header font as Coming Soon - remove from Roboto Mono override */
+.header-font {
+	font-family: 'Roboto Mono', monospace !important;
+	font-weight: 400;
+	text-transform: none !important;
+}
+
+/* Keep "Click to try the demo" in Roboto Mono */
+.text-xs.text-gray-500.italic {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Contact form send button specifically */
+#contact button[type="submit"],
+section#contact button {
+	font-family: 'Roboto Mono', monospace !important;
+	text-transform: none !important;
+}
+
+/* Header menu specific overrides */
+.header-margin .handwritten-underline,
+.header-margin a,
+.menu-link {
+	font-family: 'Coming Soon', cursive !important;
+	text-transform: uppercase !important;
+}
+
+/* Special styling for the "1 OF 1" contact button */
+.header-margin .menu-link span {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+
+/* Ensure Coming Soon font elements are uppercase */
+.handwriting,
+.body-font,
+body {
+	text-transform: uppercase !important;
 }

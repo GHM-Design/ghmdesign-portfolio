@@ -91,7 +91,7 @@
 	<meta name="description" content="Construction management software and mechanical engineering solutions focused on user ergonomics and practical functionality" />
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kalam:wght@400;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Kalam:wght@400;700&family=Roboto+Mono:wght@300;400;500;600;700&family=Coming+Soon&display=swap" rel="stylesheet">
 	
 	<!-- Tailwind CDN with font configuration -->
 	<script src="https://cdn.tailwindcss.com"></script>
@@ -100,7 +100,7 @@
 			theme: {
 				extend: {
 					fontFamily: {
-						'orbitron': ['Orbitron', 'monospace'],
+						'coming-soon': ['Coming Soon', 'cursive'],
 						'roboto-mono': ['Roboto Mono', 'monospace'],
 						'kalam': ['Kalam', 'cursive']
 					}

@@ -331,7 +331,7 @@
 			</button>
 			
 			<!-- Tool Content Area -->
-			<div class="p-8 max-h-[85vh] overflow-y-auto">
+			<div class="p-8 max-h-[85vh] overflow-y-auto" data-app="true">
 				{#if expandedProject === 'receipt-scanner'}
 					<ReceiptScanner />
 				{:else if expandedProject === 'ai-chat'}
